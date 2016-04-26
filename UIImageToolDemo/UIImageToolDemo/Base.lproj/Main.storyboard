@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="阿狸头像.png" translatesAutoresizingMaskIntoConstraints="NO" id="ffD-8a-Ryg">
+                                <rect key="frame" x="60" y="60" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="UzF-7i-ID7"/>
+                                    <constraint firstAttribute="width" constant="100" id="aPv-AX-Cf4"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YVn-m2-tAL" userLabel="裁剪后图片">
+                                <rect key="frame" x="60" y="260" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="DIK-FT-lmh"/>
+                                    <constraint firstAttribute="height" constant="100" id="Ih4-Vw-UZL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="裁剪后" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwG-Dq-tGQ">
+                                <rect key="frame" x="85" y="229.5" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="裁剪前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YB-vW-lTL">
+                                <rect key="frame" x="84.5" y="29.5" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YVn-m2-tAL" firstAttribute="leading" secondItem="ffD-8a-Ryg" secondAttribute="leading" id="HQH-eE-1QD"/>
+                            <constraint firstItem="7YB-vW-lTL" firstAttribute="centerY" secondItem="ffD-8a-Ryg" secondAttribute="centerY" constant="-70" id="IlQ-HO-mda"/>
+                            <constraint firstItem="ffD-8a-Ryg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="SPY-bj-rE9"/>
+                            <constraint firstItem="YwG-Dq-tGQ" firstAttribute="centerX" secondItem="YVn-m2-tAL" secondAttribute="centerX" id="SqY-vn-3Pp"/>
+                            <constraint firstItem="YwG-Dq-tGQ" firstAttribute="centerY" secondItem="YVn-m2-tAL" secondAttribute="centerY" constant="-70" id="dm3-P3-0FL"/>
+                            <constraint firstItem="YVn-m2-tAL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="hqa-lx-7W1"/>
+                            <constraint firstItem="YVn-m2-tAL" firstAttribute="top" secondItem="ffD-8a-Ryg" secondAttribute="bottom" constant="100" id="sYb-fh-Pq8"/>
+                            <constraint firstItem="7YB-vW-lTL" firstAttribute="centerX" secondItem="ffD-8a-Ryg" secondAttribute="centerX" id="tZp-a7-gyr"/>
+                            <constraint firstItem="ffD-8a-Ryg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="uMC-6W-ncR"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hqa-lx-7W1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="clipedImage" destination="YVn-m2-tAL" id="UTX-1D-dr7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="157" y="336"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="阿狸头像.png" width="200" height="200"/>
+    </resources>
+</document>
